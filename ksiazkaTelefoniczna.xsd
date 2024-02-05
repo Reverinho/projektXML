@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  
+  <xs:element name="ksiazkaTelefoniczna">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="osoba" maxOccurs="unbounded" minOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="osoba">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="numerTelefonu" maxOccurs="unbounded" minOccurs="1"/>
+        <xs:element ref="adresMailowy" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="daneOsobowe" maxOccurs="1" minOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="PESEL" >
+         <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[0-9]{11}" />
+              </xs:restriction>
+          </xs:simpleType> 
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+ 
+<xs:simpleType name="rodzaj">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="prywatny" />
+    <xs:enumeration value="sluzbowy" />
+  </xs:restriction>
+</xs:simpleType>
+  
+  <xs:element name="numerTelefonu">
+    <xs:complexType mixed="true">
+      <xs:attribute name="nrKierunkowy" type="xs:string" use="required"/>
+      <xs:attribute name="rodzaj" type="rodzaj" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+ 
+<xs:element name="adresMailowy" type="emailTypeComp"/>
+
+<xs:simpleType name="emailType">
+  <xs:restriction base="xs:string">
+    <xs:pattern value="[^@]+@[^\.]+\..+"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="emailTypeComp">
+  <xs:simpleContent>
+    <xs:extension base="emailType">
+      <xs:attribute name="rodzaj" type="rodzaj"/>
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+  <xs:element name="daneOsobowe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="imie" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="drugieImie" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="trzecieImie" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="nazwisko" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="adres" maxOccurs="1" minOccurs="0"/>
+        <xs:element ref="miejscePracy" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="adres">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ulica" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="nrDomu" type="xs:string" minOccurs ="1" maxOccurs="1"/>
+        <xs:element name="nrLokalu" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="miejscowosc" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="kodPocztowy" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="miejscePracy">
+    <xs:complexType mixed="true">
+      <xs:attribute name="pozycja" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

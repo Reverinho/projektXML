@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transformacja.xslt" media="screen"?>
+
+<ksiazkaTelefoniczna xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ksiazkaTelefoniczna.xsd">
+ 
+<osoba PESEL="12312312312">
+  <numerTelefonu rodzaj="sluzbowy" nrKierunkowy="+48">234567890</numerTelefonu>
+  <adresMailowy rodzaj="sluzbowy">wmysliwski@gmail.com</adresMailowy>
+  <daneOsobowe>
+    <imie>Wiesław</imie>
+    <nazwisko>Myśliwski</nazwisko>
+    <adres>
+      <ulica>Królewska</ulica>
+      <nrDomu>22</nrDomu>
+      <miejscowosc>Kraków</miejscowosc>
+      <kodPocztowy>30-067</kodPocztowy>
+    </adres>
+  </daneOsobowe>
+</osoba>
+
+<osoba PESEL="18171819010">
+  <numerTelefonu rodzaj="prywatny" nrKierunkowy="+33">657189456</numerTelefonu>
+  <adresMailowy rodzaj="prywatny">kartezjusz@gmail.com</adresMailowy>
+  <adresMailowy rodzaj="sluzbowy">ksiegowosc@agrotatry.pl</adresMailowy>
+  <daneOsobowe>
+    <imie>Rene</imie>
+    <nazwisko>Descartes</nazwisko>
+    <adres>
+      <ulica>Małe Ciche</ulica>
+      <nrDomu>42</nrDomu>
+      <miejscowosc>Małe Ciche</miejscowosc>
+      <kodPocztowy>34-531</kodPocztowy>
+    </adres>
+    <miejscePracy pozycja="księgowy">Gospodarstwo agroturystyczne "Tatry"</miejscePracy>
+  </daneOsobowe>
+</osoba>
+
+<osoba PESEL="12345678901">
+  <numerTelefonu rodzaj="prywatny" nrKierunkowy="+48">123456789</numerTelefonu>
+  <numerTelefonu rodzaj="sluzbowy" nrKierunkowy="+48">234567890</numerTelefonu>
+  <adresMailowy rodzaj="prywatny">example@example.com</adresMailowy>
+  <adresMailowy rodzaj="prywatny">example@gmail.com</adresMailowy>
+  <daneOsobowe>
+    <imie>Jan</imie>
+    <drugieImie>Maksymilian</drugieImie>
+    <nazwisko>Kowalski</nazwisko>
+    <adres>
+      <ulica>Szeroka</ulica>
+      <nrDomu>37</nrDomu>
+      <nrLokalu>12</nrLokalu>
+      <miejscowosc>Warszawa</miejscowosc>
+      <kodPocztowy>04-254</kodPocztowy>
+    </adres>
+    <miejscePracy pozycja="dyrektor">"Krzak" S.A.</miejscePracy>
+  </daneOsobowe>
+</osoba>
+
+<osoba>
+  <numerTelefonu rodzaj="prywatny" nrKierunkowy="+48">321654987</numerTelefonu>
+  <adresMailowy rodzaj="prywatny">example@example.com</adresMailowy>
+  <daneOsobowe>
+    <imie>Andrzej</imie>
+    <drugieImie>Michał</drugieImie>
+    <trzecieImie>Kornel</trzecieImie>
+    <nazwisko>Nowak</nazwisko>
+    <adres>
+      <ulica>Gramatyka</ulica>
+      <nrDomu>10</nrDomu>
+      <nrLokalu>12</nrLokalu>
+      <miejscowosc>Kraków</miejscowosc>
+      <kodPocztowy>30-067</kodPocztowy>
+    </adres>
+    <miejscePracy pozycja="starszy aspirant">Komenda policji w Krakowie</miejscePracy>
+  </daneOsobowe>
+</osoba>
+
+<osoba PESEL="98765432109">
+    <numerTelefonu rodzaj="sluzbowy" nrKierunkowy="+48">543210987</numerTelefonu>
+    <adresMailowy rodzaj="sluzbowy">john.doe@company.com</adresMailowy>
+    <daneOsobowe>
+      <imie>John</imie>
+      <nazwisko>Doe</nazwisko>
+      <adres>
+        <ulica>Main Street</ulica>
+        <nrDomu>123</nrDomu>
+        <miejscowosc>Anytown</miejscowosc>
+        <kodPocztowy>12-345</kodPocztowy>
+      </adres>
+      <miejscePracy pozycja="programista">ABC Software Ltd.</miejscePracy>
+    </daneOsobowe>
+  </osoba>
+
+  <osoba PESEL="87654321098">
+    <numerTelefonu rodzaj="prywatny" nrKierunkowy="+33">654321098</numerTelefonu>
+    <adresMailowy rodzaj="prywatny">jane.smith@example.com</adresMailowy>
+    <daneOsobowe>
+      <imie>Jane</imie>
+      <nazwisko>Smith</nazwisko>
+      <adres>
+        <ulica>Oak Street</ulica>
+        <nrDomu>456</nrDomu>
+        <miejscowosc>Anothercity</miejscowosc>
+        <kodPocztowy>45-678</kodPocztowy>
+      </adres>
+      <miejscePracy pozycja="architekt">XYZ Architects</miejscePracy>
+    </daneOsobowe>
+  </osoba>
+  
+</ksiazkaTelefoniczna>

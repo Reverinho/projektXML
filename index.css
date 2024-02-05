@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One');
+
+
+
+body {
+  font-family: Fjalla One, sans-serif;
+  line-height: 1.6;
+  padding: 10px;
+  background: linear-gradient(15deg, #ffcc99, #cc6633);
+}
+
+  
+  h1 {
+    text-align: center;
+    color: white;
+    font-style: italic;
+    font-size: 3em;
+    font-family: Fjalla One, Courier, monospace;
+    text-shadow: 2px 2px 2px #999;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact {
+    margin-bottom: 25px;
+    height: auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    background-image: url("https://www.creativefabrica.com/wp-content/uploads/2021/12/11/Paper-Texture-Background-Graphics-21547664-1-580x386.jpg");
+    box-shadow: 0px 0px 10px brown;
+    background-size: 100%;
+  }
+  
+  .name {
+    font-size: 1.6em;
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .phone, .email {
+    position: relative;
+    margin-top: 5px;
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 8px;
+  }
+
+
+  .tooltip {
+    display: none;
+    position: absolute;
+    right: 100%; /* Umieść tooltip z prawej strony kontenera */
+    top: 0;
+    width: 130px; /* Ustaw szerokość tooltipu */
+    border: 1px solid #333;
+    color: #cc6633;
+    background-color: #ffcc99;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all .1s;
+
+  }
+
+  
+  .details-link {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1em;
+    border: 1px solid #cc6633;
+    padding: 5px 10px;
+    background-color: #cc6633;
+    border-radius:6px;
+    transition: all .15s;
+    box-shadow: 0px 0px 5px grey;
+  }
+  .details-link:hover{
+    background-color: #ffcc99;
+    color: black;
+    box-shadow: 0px 0px 10px #cc6633;
+  }
+
+
+  
+  .details {
+    position: relative;
+    display: none;
+    margin-top: 5px;
+    color: #3C3C3C;
+  }
+
+  .details.show {
+    display: block;
+  }
+  
+  .container {
+    height: 80vh;
+    width: 60%;
+    margin-top: 0vh;
+    margin-left: 20%;
+    padding: 10px;
+    overflow-y: auto; /* Dodaj pasek przewijania tylko w pionie, jeśli zawartość przekracza dostępną wysokość */
+    padding-right: 10px; /* Dodaj odstęp z prawej strony, aby uniknąć nakładania się paska przewijania na zawartość */
+  }
+  
+  /* Dostosuj wygląd paska przewijania */
+  .container::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+  }
+  
+  .container::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+    border-radius: 5px; /* Dodaj zaokrąglenie tła paska przewijania */
+  }
+  
